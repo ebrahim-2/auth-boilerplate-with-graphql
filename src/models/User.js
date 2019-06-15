@@ -6,7 +6,12 @@ const userSchema = new mongoose.Schema({
     unique: true,
     type: String
   },
-  password: String
+  password: String,
+  resetPasswordToken: {
+    unique: true,
+    type: String
+  },
+  resetPasswordTokenExpires: Date
 });
 
 const User = mongoose.model('User', userSchema);

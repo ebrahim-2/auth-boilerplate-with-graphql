@@ -5,6 +5,8 @@ type Query {
 type Mutation {
   login(data: LoginInputType!): User!
   register(data: RegisterInputType!): User!
+  forgotPassword(email: String!): String!
+  changePassword(token: String!, password: String!): User!
 }
 
 input LoginInputType {
